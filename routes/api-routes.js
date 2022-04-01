@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const db = require("../db");
 
+// Routing function to get all notes thats were saved.
 router.get("/notes", (req, res) => {
   db.readNotes()
     .then((notes) => {
@@ -9,6 +10,7 @@ router.get("/notes", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Routing function to post a note.
 router.post("/notes", (req, res) => {
     db.createNote(req.body)
       .then((notes) => {

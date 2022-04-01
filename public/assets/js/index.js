@@ -4,6 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+// query selectors to target front end.
 if (window.location.pathname === "/notes") {
   noteTitle = document.querySelector(".note-title");
   noteText = document.querySelector(".note-textarea");
@@ -25,6 +26,7 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// call back fuction to get all notes.
 const getNotes = () =>
   fetch("/api/notes", {
     method: "GET",
@@ -33,6 +35,7 @@ const getNotes = () =>
     },
   });
 
+  // save note function to store input from user.
 const saveNote = (note) =>
   fetch("/api/notes", {
     method: "POST",
@@ -66,6 +69,7 @@ const renderActiveNote = () => {
   }
 };
 
+// save note handler to then render so user can see.
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,

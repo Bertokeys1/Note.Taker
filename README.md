@@ -12,12 +12,12 @@
 
 ## Usage
 
-This is a "command-line" application that asked about employee info to build a team and show each employee's role.
+This is a note taking appliction. Quickly capture whats on your mind in one place!
 
 ## Tests
 
-Here is a clip of the app in action!
-https://watch.screencastify.com/v/ofVuYpydbfapPjOglKIp
+This application is in on Heroku.
+https://note-taker2000.herokuapp.com/
 
 ## Acceptance Criteria
 ```
